@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #212121; */
+  background-image: url(https://media.istockphoto.com/id/177247796/photo/night-sky-filled-with-stars-and-nebulae.webp?b=1&s=170667a&w=0&k=20&c=x7Q17QKSwCeVeb_52z9PmzkORkZkmTdOP-EutYxTC8M=);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+}
+
+.clock {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-image: url(https://images.unsplash.com/photo-1698685425028-49105e29e793?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 50px rgb(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock span {
+  position: absolute;
+  transform: rotate(calc(30deg * var(--i)));
+  inset: 12px;
+  text-align: center;
+}
+
+.clock span b {
+  transform: rotate(calc(-30deg * var(--i)));
+  display: inline-block;
+  font-size: 20px;
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.hand {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hand i {
+  position: absolute;
+  width: 4px;
+  height: 70px;
+  background-color: var(--clr);
+  border-radius: 8px;
+}
